@@ -1,0 +1,80 @@
+/**
+.circle {
+    display: block;
+    width: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+**/
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.hide {
+    display: none !important;
+}
+
+.show-for-small {
+  /** just show small, medium and large do not care **/
+  @media (max-width:map_get($grid-breakpoints, medium)) {
+      display: block;
+  }
+}
+.show-for-small-only {
+  /** show small only, hide others **/
+  @extend .show-for-small;
+  @media (min-width:map_get($grid-breakpoints, medium)) {
+    display: none;
+  }
+}
+
+.show-for-medium {
+  /** show for medium and large **/
+  @media (min-width:map_get($grid-breakpoints, medium)) and (max-width:map_get($grid-breakpoints, large)) {
+    display: block;
+  }
+}
+.show-for-medium-only {
+  @extend .show-for-medium;
+  @media (max-width:map_get($grid-breakpoints, medium)) {
+    display: none;
+  }
+  @media (min-width:map_get($grid-breakpoints, large)) {
+    display: none;
+  }
+}
+
+.show-for-small-medium {
+  @extend .show-for-medium;
+  @extend .show-for-small;
+  @media (min-width:map_get($grid-breakpoints, large)) {
+    display: none;
+  }
+}
+
+.show-for-medium-large {
+  /** only **/
+  @extend .show-for-medium;
+  @extend .show-for-large;
+  @media (max-width:map_get($grid-breakpoints, medium)) {
+    display: none;
+  }
+}
+
+.show-for-large {
+  /** show for large only **/
+  @media (min-width:map_get($grid-breakpoints, large)) {
+      display: block;
+  }
+}
+.show-for-large-only {
+  @extend .show-for-large;
+  @media (max-width:map_get($grid-breakpoints, large)) {
+      display: none;
+  }
+}
