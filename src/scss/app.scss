@@ -180,7 +180,7 @@ $top-height: 4.5rem;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -70%);
   }
   .description {
     color: #ccc;
@@ -334,7 +334,14 @@ svg {
       line-height: 5rem;
       text-align: center;
       img {
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1);
+        transition: all .2s;
         //vertical-align: middle;
+      }
+      &:hover img {
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
       }
     }
   }
@@ -342,11 +349,22 @@ svg {
 #section7 {
   .wrap {
     background: #18191c;
+    height: 100%;
+  }
+  .small-12 {
+    height: 100%;
+    position: relative;
+  }
+  .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
   }
   .small-12:first-child {
-    padding: 1rem;
+    color: #808080;
+    //padding: 1rem;
   }
-  color: #808080;
   .circle {
     $size: 3rem;
     display: inline-block;
