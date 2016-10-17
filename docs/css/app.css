@@ -1211,6 +1211,14 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
   .show-for-large-only {
     display: none; } }
 
+@font-face {
+  font-family: meng;
+  src: url(../fonts/mengnachaogang.otf); }
+
+h1, h5 {
+  font-family: meng; }
+
+/** common **/
 a:hover {
   text-decoration: none; }
 
@@ -1228,6 +1236,16 @@ h4 {
 .leader {
   color: #fdd947; }
 
+.center-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%); }
+  @media (max-width: 640px) {
+    .center-box {
+      width: 80%; } }
+
+/** common end **/
 .top-bar {
   height: 4.5rem;
   background: rgba(0, 0, 0, 0.2);
@@ -1284,6 +1302,12 @@ h4 {
   .section .container {
     height: 100%; }
 
+@keyframes bg-ani {
+  0% {
+    background-size: 100%; }
+  100% {
+    background-size: 110%; } }
+
 #section1 .container {
   background-image: url(../img/bg1.png);
   background-size: cover;
@@ -1299,8 +1323,9 @@ h4 {
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.4); }
-  #section1 .container .medium-12 {
-    padding-top: 45vh; }
+  @media (min-width: 640px) {
+    #section1 .container .center-box {
+      transform: translateX(0); } }
   #section1 .container h1 {
     font-size: 3rem; }
     @media (max-width: 640px) {
@@ -1312,18 +1337,15 @@ h4 {
     font-size: 40%; }
 
 #section2 .container {
-  height: 100%;
   background-image: url(../img/bg2.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
-  #section2 .container .wrap {
+  #section2 .container, #section2 .container .wrap, #section2 .container .medium-12 {
     height: 100%; }
-    @media (max-width: 1024px) {
-      #section2 .container .wrap {
-        background: rgba(33, 33, 33, 0.6); } }
-  #section2 .container .medium-12 {
-    height: 100%; }
+  @media (max-width: 1024px) {
+    #section2 .container .wrap {
+      background: rgba(33, 33, 33, 0.6); } }
   #section2 .container .medium-12:nth-child(1) {
     background-image: url(../img/bg2.png);
     background-size: cover;
@@ -1338,11 +1360,6 @@ h4 {
     @media (max-width: 1024px) {
       #section2 .container .medium-12:nth-child(2) {
         background: none; } }
-  #section2 .container .center-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -70%); }
   #section2 .container .description {
     color: #ccc; }
 
@@ -1360,23 +1377,28 @@ h4 {
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.6); }
+  #section3 .container, #section3 .container .wrap, #section3 .container .small-12 {
+    height: 100%; }
+  #section3 .container svg {
+    max-width: 60%; }
+  @media (max-width: 640px) {
+    #section3 .container {
+      padding: 4rem 0;
+      box-sizing: border-box; }
+      #section3 .container .small-12 {
+        height: auto; } }
   #section3 .container .wrap {
     width: 1200px;
-    max-width: 100%;
-    margin: 0 auto;
-    height: 100%; }
+    max-width: 95%;
+    margin: 0 auto; }
   #section3 .container .small-12 {
-    height: 100%;
     position: relative; }
-    @media (max-width: 640px) {
-      #section3 .container .small-12 {
-        height: 100%/3 !important; } }
     #section3 .container .small-12:hover {
       background: rgba(0, 0, 0, 0.15); }
-      #section3 .container .small-12:hover div {
+      #section3 .container .small-12:hover .box {
         padding-top: 5rem;
         color: #fdd947; }
-    #section3 .container .small-12 div {
+    #section3 .container .small-12 .box {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -1384,6 +1406,18 @@ h4 {
       color: white;
       text-align: center;
       transition: padding-top 2s; }
+      @media (max-width: 640px) {
+        #section3 .container .small-12 .box {
+          width: 100%;
+          display: flex;
+          align-items: center; }
+          #section3 .container .small-12 .box div {
+            vertical-align: middle; }
+          #section3 .container .small-12 .box div:nth-child(1) {
+            width: 25%;
+            color: #fdd947; }
+          #section3 .container .small-12 .box div:nth-child(2) {
+            width: 75%; } }
     #section3 .container .small-12 h5 {
       margin: 1rem 0; }
 
@@ -1392,7 +1426,7 @@ svg {
   fill: currentColor; }
 
 @media (max-width: 640px) {
-  #section3, #section4 {
+  #section4 {
     height: 300vh; } }
 
 #section4 .container .wrap {
@@ -1431,7 +1465,6 @@ svg {
   background-image: url(../img/bg43.png); }
 
 #section4 .container .box {
-  position: relative;
   color: white;
   height: 100%;
   box-sizing: border-box; }
@@ -1488,27 +1521,26 @@ svg {
     #section6 .wrap .small-6 img {
       -webkit-filter: grayscale(1);
       filter: grayscale(1);
-      transition: all .2s; }
+      transition: all .2s;
+      max-width: 60%; }
     #section6 .wrap .small-6:hover img {
       -webkit-filter: grayscale(0);
       filter: grayscale(0); }
 
-#section7 .wrap {
-  background: #18191c;
+#section7 .wrap, #section7 .small-12 {
   height: 100%; }
 
-#section7 .small-12 {
-  height: 100%;
-  position: relative; }
+#section7 .wrap {
+  background: #18191c; }
 
-#section7 .box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -70%); }
+#section7 .small-12 {
+  position: relative; }
 
 #section7 .small-12:first-child {
   color: #808080; }
+
+#section7 .small-12:last-child {
+  padding: 0; }
 
 #section7 .circle {
   display: inline-block;

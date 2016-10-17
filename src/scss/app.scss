@@ -10,6 +10,16 @@
 @import 'buttons';
 @import 'helper';
 
+@font-face {
+    font-family: meng;
+    src: url(../fonts/mengnachaogang.otf);
+}
+
+h1,h5 {
+    font-family: meng;
+}
+
+/** common **/
 a:hover {
   text-decoration: none;
 }
@@ -52,7 +62,21 @@ h4 {
   color: #fdd947;
 }
 
-$top-height: 4.5rem; 
+
+.center-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @media (max-width:map_get($grid-breakpoints, medium)) {
+  width: 80%;
+  }
+  transform: translate(-50%, -70%);
+}
+
+/** common end **/
+
+
+$top-height: 4.5rem;
 .top-bar {
   height: $top-height;
   background: rgba(black, .2);
@@ -126,16 +150,26 @@ $top-height: 4.5rem;
   }
 }
 
-#section1 {
-  //height: 100vh !important;
+@keyframes bg-ani {
+  0% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 110%;
+  }
 }
+
 #section1 .container {
   background-image: url(../img/bg1.png);
   @include bg-image;
   @include box-cover(rgba(black, 0.4));
+  //-webkit-animation: bg-ani 4s linear infinite;
+  //animation: bg-ani 4s linear infinite;
   color: white;
-  .medium-12 {
-    padding-top: 45vh;
+  .center-box {
+      @media (min-width:map_get($grid-breakpoints, medium)) {
+          transform: translateX(0);
+      }
   }
   h1 {
     font-size: 3rem;
@@ -143,24 +177,25 @@ $top-height: 4.5rem;
       font-size: 2rem;
     }
   }
+
   .subheader {
-    display: block;
-    margin: .5rem 0;
-    font-size: 40%;
+      display: block;
+      margin: .5rem 0;
+      font-size: 40%;
   }
 }
+
+
 #section2 .container {
-  .wrap {
+  background-image: url(../img/bg2.png);
+  @include bg-image;
+  &, .wrap, .medium-12 {
     height: 100%;
+  }
+  .wrap {
     @media (max-width:map_get($grid-breakpoints, large)) {
       background: rgba(33,33,33,0.6);
     }
-  }
-  height: 100%;
-  background-image: url(../img/bg2.png);
-  @include bg-image;
-  .medium-12 {
-    height: 100%;
   }
   .medium-12:nth-child(1) {
     background-image: url(../img/bg2.png);
@@ -176,12 +211,6 @@ $top-height: 4.5rem;
       background: none;
     }
   }
-  .center-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -70%);
-  }
   .description {
     color: #ccc;
   }
@@ -191,29 +220,34 @@ $top-height: 4.5rem;
   background-image: url(../img/bg3.png);
   @include bg-image;
   @include box-cover(rgba(black, 0.6));
+  &, .wrap, .small-12 {
+      height: 100%;
+  }
+  svg {
+      max-width: 60%;
+  }
+  @media (max-width:map_get($grid-breakpoints, medium)){
+      padding: 4rem 0;
+      box-sizing: border-box;
+      .small-12 {
+          height: auto;
+      }
+  }
   .wrap {
     width: 1200px;
-    max-width: 100%;
+    max-width: 95%;
     margin: 0 auto;
-    height: 100%;
   }
   .small-12 {
-    height: 100%;
     position: relative;
-    @media (max-width:map_get($grid-breakpoints, medium)){
-      height: 100%/3 !important;
-    }
-    @media (min-width:map_get($grid-breakpoints, medium)) {
-      //height: 100%;
-    }
     &:hover {
       background: rgba(black, 0.15);
-      div {
+      .box {
         padding-top: 5rem;
-        color: #fdd947; 
+        color: #fdd947;
       }
     }
-    div {
+    .box {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -221,6 +255,22 @@ $top-height: 4.5rem;
       color: white;
       text-align: center;
       transition: padding-top 2s;
+      @media (max-width:map_get($grid-breakpoints, medium)){
+          width: 100%;
+          display: flex;
+          align-items: center;
+          div {
+              vertical-align: middle;
+          }
+          div:nth-child(1) {
+              width: 25%;
+              color: #fdd947;
+          }
+          div:nth-child(2) {
+              width: 75%;
+          }
+      }
+
     }
     h5 {
       margin: 1rem 0;
@@ -234,7 +284,7 @@ svg {
 }
 
 @media (max-width:map_get($grid-breakpoints, medium)){
-  #section3, #section4 {
+  #section4 {
     height: 300vh;
   }
 }
@@ -267,19 +317,18 @@ svg {
     background-image: url(../img/bg43.png);
   }
   .box {
-    position: relative;
     color: white;
     height: 100%;
     box-sizing: border-box;
     div {
-      position: absolute; 
+      position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
     }
     &:before {
       content: "";
-      position: absolute; 
+      position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -337,6 +386,7 @@ svg {
         -webkit-filter: grayscale(1);
         filter: grayscale(1);
         transition: all .2s;
+        max-width: 60%;
         //vertical-align: middle;
       }
       &:hover img {
@@ -347,23 +397,20 @@ svg {
   }
 }
 #section7 {
+  .wrap, .small-12 {
+    height: 100%;
+  }
   .wrap {
     background: #18191c;
-    height: 100%;
   }
   .small-12 {
-    height: 100%;
     position: relative;
-  }
-  .box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -70%);
   }
   .small-12:first-child {
     color: #808080;
-    //padding: 1rem;
+  }
+  .small-12:last-child {
+      padding: 0;
   }
   .circle {
     $size: 3rem;
@@ -377,7 +424,5 @@ svg {
     line-height: $size - 1rem;
     border-radius: $size;
     background: #757575;
-    img {
-    }
   }
 }
