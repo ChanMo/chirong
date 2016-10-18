@@ -88,6 +88,6 @@ gulp.task('default', ['sass', 'js', 'nunjucksRender', 'browserSync'], function()
 });
 
 /** build **/
-gulp.task('build', ['clean', 'sass', 'nunjucksRender', 'fonts', 'images', 'useref'], function(){
+gulp.task('build', ['clean', 'sass', 'js', 'nunjucksRender', 'fonts', 'images', 'useref'], function(){
     console.log('Building files...');
 })

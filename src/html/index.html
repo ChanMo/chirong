@@ -1,5 +1,8 @@
 {% extends "base.html" %}
 {% block main %}
+
+
+
 <div class="top-bar top-bar_fixed">
   <div class="small-header show-for-small-only text-center">驰荣科技
     <a href="#" class="menu-toggle float-right"><i class="fa fa-bars"></i></a>
@@ -17,9 +20,9 @@
 <div class="section" id="section1">
   <div class="container">
     <div class="center-box">
-      <h1 class="animated">
+      <h1 class="animated " data-vp-add-class="fadeInUp">
         <small class="subheader">The international leading service provider of "Internet Plus"</small>
-        全国領先的“<span class="leader">互联網+</span>”服务商
+        全国领先的“<span class="leader">互联网+</span>”服务商
       </h1>
     </div>
   </div>
@@ -31,10 +34,10 @@
     </div>
     <div class="medium-12 large-6">
       <div class="center-box">
-      <h4 class="animated">公司简介
+      <h4 class="animated " data-vp-add-class="fadeInUp">公司简介
         <small class="subheader">Company profile</small>
       </h4>
-      <div class="description animated">
+      <div class="description animated " data-vp-add-class="fadeInUp">
         <p><span class="leader">济南驰荣信息科技有限公司</span>是一家专注于移动端技术服务的公司。</p>
         <p>公司自成立以来，服务客户涉及的行业包括健康、医疗、汽车、生态农业等领域，</p>
         <p>专注于移动端技术的研究与应用；致力于传统企业的移动互联网转型。</p>
@@ -49,10 +52,10 @@
     <div class="wrap">
       <div class="small-12 medium-4">
         <div class="box">
-          <div class="animated" data-vp-add-class="fadeInUp" data-vp-repeat="true">
+          <div class="animated " data-vp-add-class="fadeInUp" data-vp-add-class-small="fadeInLeft">
             {% include "../img/icon1.svg" %}
           </div>
-          <div class="animated" data-vp-add-class="fadeInUp" data-vp-repeat="true">
+          <div class="animated " data-vp-add-class="fadeInUp" data-vp-add-class-small="fadeInLeft">
             <h5>定位</h5>
             <p>全国领先的“互联网+”服务商</p>
           </div>
@@ -60,10 +63,10 @@
       </div>
       <div class="small-12 medium-4">
         <div class="box">
-          <div class="animated">
+          <div class="animated " data-vp-add-class="fadeInUp" data-vp-add-class-small="fadeInLeft">
             {% include "../img/icon2.svg" %}
           </div>
-          <div class="animated">
+          <div class="animated " data-vp-add-class="fadeInUp" data-vp-add-class-small="fadeInLeft">
         <h5>服务项目</h5>
         <p>企业官网建设</p>
         </div>
@@ -71,10 +74,10 @@
       </div>
       <div class="small-12 medium-4">
         <div class="box">
-          <div class="animated">
+          <div class="animated " data-vp-add-class="fadeInUp" data-vp-add-class-small="fadeInLeft">
             {% include '../img/icon3.svg' %}
           </div>
-          <div class="animated">
+          <div class="animated " data-vp-add-class="fadeInUp" data-vp-add-class-small="fadeInLeft">
         <h5>价值观</h5>
         <p>敬畏、友善、激情、创新</p>
         </div>
@@ -134,7 +137,7 @@
     <div class="wrap">
       {% for i in range(1,9) %}
       <div class="small-6 medium-3">
-      <img src="img/image{{ i }}.png" class="animated">
+      <img src="img/image{{ i }}.png" class="animated " data-vp-add-class="fadeInUp">
       </div>
       {% endfor %}
     </div>
@@ -144,19 +147,19 @@
   <div class="container">
     <div class="wrap">
       <div class="small-12 medium-6">
-          <div class="center-box">
-        <h4 class="animated">联系我们
-          <small class="subheader">Contact US</small>
-        </h4>
-        <div class="address animated">
-          <p class="leader">济南驰荣信息科技有限公司</p>
-          <p>地址：山东省济南市高新区会展西路88号香格里拉1号楼22F</p>
-          <p>联系人：金老师</p>
-          <p>电话：15662798288</p>
-          <a href="http://weibo.com/2772941304/profile?topnav=1&wvr=6&is_all=1" class="circle"><img src="img/xinlang.png"></a>
-          <a href="#" class="circle"><img src="img/weixin.png"></a>
-        </div>
+        <div class="center-box">
+          <h4 class="animated" data-vp-add-class="fadeInUp">联系我们
+            <small class="subheader">Contact US</small>
+          </h4>
+          <div class="address animated" data-vp-add-class="fadeInUp">
+            <p class="leader">济南驰荣信息科技有限公司</p>
+            <p>地址：山东省济南市高新区会展西路88号香格里拉1号楼22F</p>
+            <p>联系人：金老师</p>
+            <p>电话：15662798288</p>
+            <a href="http://weibo.com/2772941304/profile?topnav=1&wvr=6&is_all=1" class="circle"><img src="img/xinlang.png"></a>
+            <a href="#" class="circle"><img src="img/weixin.png"></a>
           </div>
+        </div>
       </div>
       <div class="small-12 medium-6" id="map">
       </div>
