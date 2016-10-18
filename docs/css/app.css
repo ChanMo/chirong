@@ -1239,14 +1239,23 @@ h4 {
 .invisible {
   visibility: hidden; }
 
-.center-box {
+.center-box, #section3 .container .small-12 .box {
   position: absolute;
   top: 50%;
   left: 50%;
+  -moz-transform: translate(-50%, -70%);
+  -webkit-transform: translate(-50%, -70%);
+  -o-transform: translate(-50%, -70%);
+  -ms-transform: translate(-50%, -70%);
   transform: translate(-50%, -70%); }
   @media (max-width: 640px) {
-    .center-box {
-      width: 80%; } }
+    .center-box, #section3 .container .small-12 .box {
+      width: 80%;
+      -moz-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); } }
 
 /** common end **/
 .loader {
@@ -1262,7 +1271,12 @@ h4 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 3rem; }
 
 .top-bar {
   height: 4.5rem;
@@ -1312,9 +1326,10 @@ h4 {
       .menu a {
         background: rgba(0, 0, 0, 0.6); } }
 
+#fullpage {
+  height: 100vh; }
+
 .section {
-  margin-top: -4.5rem;
-  padding-top: 4.5rem;
   height: 100vh;
   min-height: 100vh; }
   .section .container {
@@ -1340,7 +1355,10 @@ h4 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    -moz-animation: bg-ani 8s linear infinite;
     -webkit-animation: bg-ani 8s linear infinite;
+    -o-animation: bg-ani 8s linear infinite;
+    -ms-animation: bg-ani 8s linear infinite;
     animation: bg-ani 8s linear infinite; }
 
 #section1 .container {
@@ -1355,13 +1373,13 @@ h4 {
     left: 0;
     background-color: rgba(0, 0, 0, 0.4); }
   @media (min-width: 640px) {
-    #section1 .container .center-box {
+    #section1 .container .center-box, #section1 #section3 .container .small-12 .box, #section3 #section1 .container .small-12 .box {
       transform: translateX(0); } }
   #section1 .container h1 {
     font-size: 3rem; }
     @media (max-width: 640px) {
       #section1 .container h1 {
-        font-size: 2rem; } }
+        font-size: 1.6rem; } }
   #section1 .container .subheader {
     display: block;
     margin: .5rem 0;
@@ -1414,8 +1432,10 @@ h4 {
     max-width: 60%; }
   @media (max-width: 640px) {
     #section3 .container {
-      padding: 4rem 0;
       box-sizing: border-box; }
+      #section3 .container .wrap {
+        padding: 4rem 0;
+        box-sizing: border-box; }
       #section3 .container .small-12 {
         height: auto; } }
   #section3 .container .wrap {
@@ -1431,13 +1451,18 @@ h4 {
           padding-top: 5rem;
           color: #fdd947; } }
     #section3 .container .small-12 .box {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
       color: white;
       text-align: center;
+      -moz-transition: padding-top 2s;
+      -webkit-transition: padding-top 2s;
+      -o-transition: padding-top 2s;
+      -ms-transition: padding-top 2s;
       transition: padding-top 2s; }
+      #section3 .container .small-12 .box h5 {
+        margin: 1rem 0; }
+      #section3 .container .small-12 .box svg {
+        width: 100px;
+        fill: currentColor; }
       @media (max-width: 640px) {
         #section3 .container .small-12 .box {
           width: 100%;
@@ -1448,14 +1473,12 @@ h4 {
           #section3 .container .small-12 .box div:nth-child(1) {
             width: 25%;
             color: #fdd947; }
+            #section3 .container .small-12 .box div:nth-child(1) svg {
+              width: 40px; }
           #section3 .container .small-12 .box div:nth-child(2) {
-            width: 75%; } }
-    #section3 .container .small-12 h5 {
-      margin: 1rem 0; }
-
-svg {
-  width: 100px;
-  fill: currentColor; }
+            width: 75%; }
+            #section3 .container .small-12 .box div:nth-child(2) h5 {
+              margin: .2rem 0; } }
 
 @media (max-width: 640px) {
   #section4 {
@@ -1504,18 +1527,30 @@ svg {
     position: absolute;
     top: 50%;
     left: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
   #section4 .container .box:before {
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     display: block;
     width: 25vw;
     height: 25vw;
     border-radius: 25vw;
     background: rgba(255, 255, 255, 0.2);
+    -moz-transition: all 1.5s;
+    -webkit-transition: all 1.5s;
+    -o-transition: all 1.5s;
+    -ms-transition: all 1.5s;
     transition: all 1.5s; }
     @media (max-width: 640px) {
       #section4 .container .box:before {
@@ -1538,6 +1573,10 @@ svg {
   position: absolute;
   top: 50%;
   left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 1000px;
   max-width: 90%; }
@@ -1551,13 +1590,19 @@ svg {
       #section6 .wrap .small-6 {
         height: 20vh; } }
     #section6 .wrap .small-6 img {
+      -moz-filter: grayscale(1);
       -webkit-filter: grayscale(1);
+      -o-filter: grayscale(1);
+      -ms-filter: grayscale(1);
       filter: grayscale(1);
       transition: all .2s;
       max-width: 60%;
       max-height: 3rem; }
     #section6 .wrap .small-6:hover img {
+      -moz-filter: grayscale(0);
       -webkit-filter: grayscale(0);
+      -o-filter: grayscale(0);
+      -ms-filter: grayscale(0);
       filter: grayscale(0); }
 
 #section7 .wrap, #section7 .small-12 {
@@ -1581,12 +1626,12 @@ svg {
 
 #section7 .circle {
   display: inline-block;
-  width: 3rem;
-  height: 3rem;
-  margin: 1rem .5rem 0 0;
+  width: 2rem;
+  height: 2rem;
+  margin: .5rem .5rem 0 0;
   padding: .5rem;
   box-sizing: border-box;
   text-align: center;
-  line-height: 2rem;
-  border-radius: 3rem;
+  line-height: 1rem;
+  border-radius: 2rem;
   background: #757575; }

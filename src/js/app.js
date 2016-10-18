@@ -1,3 +1,15 @@
+// $("#fullpage").fullpage({
+//   anchors: ['mainpage', 'aboutpage', 'profilepage', 'servicepage', 'friendpage', 'contactpage'],
+//   menu: '#nav'
+//   //navigation: true
+// });
+
+// $("#nav li").click(function(){
+//   if($(".small-header").is(":visible")){
+//     $("#nav").hide();
+//   }
+// });
+
 $(".menu-toggle").bind("click", function(e){
   e.preventDefault();
   $("#nav").toggle();
@@ -11,6 +23,7 @@ $("#nav").onePageNav({
     }
   }
 });
+
 
 var map = new AMap.Map('map', {
   resizeEnable: false,

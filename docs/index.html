@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/app.min.css">
     <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
-
+    <!-- <link href="//cdn.bootcss.com/fullPage.js/2.8.7/jquery.fullPage.min.css" rel="stylesheet"> -->
   </head>
   <body>
 
@@ -26,52 +26,59 @@
     <a href="#" class="menu-toggle float-right"><i class="fa fa-bars"></i></a>
   </div>
   <ul class="menu show-for-medium-large text-right" id="nav">
-    <li class="active"><a href="#section1">驰荣科技</a></li>
-    <li><a href="#section2">公司简介</a></li>
-    <li><a href="#section3">公司理念</a></li>
-    <li><a href="#section4">产品服务</a></li>
-    <!-- <li><a href="#section5">团队介绍</a></li> -->
-    <li><a href="#section6">合作伙伴</a></li>
-    <li><a href="#section7">联系我们</a></li>
+    <li data-menuarchor="mainpage" class="active"><a href="#section1">驰荣科技</a></li>
+    <li data-menuanchor="aboutpage"><a href="#section2">公司简介</a></li>
+    <li data-menuanchor="profilepage"><a href="#section3">公司理念</a></li>
+    <li data-menuanchor="servicepage"><a href="#section4">产品服务</a></li>
+    <li data-menuanchor="friendpage"><a href="#section6">合作伙伴</a></li>
+    <li data-menuanchor="contactpage"><a href="#section7">联系我们</a></li>
+    <!-- <li data-menuarchor="mainpage" class="active"><a href="#mainpage">驰荣科技</a></li> -->
+    <!-- <li data-menuanchor="aboutpage"><a href="#aboutpage">公司简介</a></li> -->
+    <!-- <li data-menuanchor="profilepage"><a href="#profilepage">公司理念</a></li> -->
+    <!-- <li data-menuanchor="servicepage"><a href="#servicepage">产品服务</a></li> -->
+    <!-- <li data-menuanchor="friendpage"><a href="#friendpage">合作伙伴</a></li> -->
+    <!-- <li data-menuanchor="contactpage"><a href="#contactpage">联系我们</a></li> -->
   </ul>
 </div>
-<div class="section" id="section1">
-  <div class="container">
-    <div class="center-box">
-      <h1 class="animated " data-vp-add-class="fadeInUp">
-        <small class="subheader">The international leading service provider of "Internet Plus"</small>
-        全国领先的“<span class="leader">互联网+</span>”服务商
-      </h1>
-    </div>
-  </div>
-</div>
-<div class="section" id="section2">
-  <div class="container">
-  <div class="wrap">
-    <div class="medium-12 large-6">
-    </div>
-    <div class="medium-12 large-6">
+
+
+  <div class="section" id="section1" data-anchor="mainpage">
+    <div class="container">
       <div class="center-box">
-      <h4 class="animated " data-vp-add-class="fadeInUp">公司简介
-        <small class="subheader">Company profile</small>
-      </h4>
-      <div class="description animated " data-vp-add-class="fadeInUp">
-        <p><span class="leader">济南驰荣信息科技有限公司</span>是一家专注于移动端技术服务的公司。</p>
-        <p>公司自成立以来，服务客户涉及的行业包括健康、医疗、汽车、生态农业等领域，</p>
-        <p>专注于移动端技术的研究与应用；致力于传统企业的移动互联网转型。</p>
-      </div>
+        <h1 class="animated " data-vp-add-class="fadeInUp">
+          <small class="subheader">The international leading service provider of "Internet Plus"</small>
+          全国领先的“<span class="leader">互联网+</span>”服务商
+        </h1>
       </div>
     </div>
   </div>
+  <div class="section" id="section2" data-anchor="aboutpage">
+    <div class="container">
+      <div class="wrap">
+        <div class="medium-12 large-6">
+        </div>
+        <div class="medium-12 large-6">
+          <div class="center-box">
+            <h4 class="animated " data-vp-add-class="fadeInUp">公司简介
+              <small class="subheader">Company profile</small>
+            </h4>
+            <div class="description animated " data-vp-add-class="fadeInUp">
+              <p><span class="leader">济南驰荣信息科技有限公司</span>是一家专注于移动端技术服务的公司。</p>
+              <p>公司自成立以来，服务客户涉及的行业包括健康、医疗、汽车、生态农业等领域，</p>
+              <p>专注于移动端技术的研究与应用；致力于传统企业的移动互联网转型。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-<div class="section" id="section3">
-  <div class="container">
-    <div class="wrap">
-      <div class="small-12 medium-4">
-        <div class="box">
-          <div class="animated " data-vp-add-class="fadeInUp" data-vp-add-class-small="fadeInLeft">
-            <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+  <div class="section" id="section3" data-anchor="profilepage">
+    <div class="container">
+      <div class="wrap">
+        <div class="small-12 medium-4">
+          <div class="box">
+            <div class="animated " data-vp-add-class="fadeInUp" data-vp-add-class-small="fadeInLeft">
+              <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
@@ -135,17 +142,17 @@
   </metadata>
 </svg>
 
-          </div>
-          <div class="animated " data-vp-add-class="fadeInUp" data-vp-add-class-small="fadeInLeft">
-            <h5>定位</h5>
-            <p>全国领先的“互联网+”服务商</p>
+            </div>
+            <div class="animated " data-vp-add-class="fadeInUp" data-vp-add-class-small="fadeInLeft">
+              <h5>定位</h5>
+              <p>全国领先的“互联网+”服务商</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="small-12 medium-4">
-        <div class="box">
-          <div class="animated " data-vp-add-class="fadeInUp" data-vp-add-class-small="fadeInLeft">
-            <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+        <div class="small-12 medium-4">
+          <div class="box">
+            <div class="animated " data-vp-add-class="fadeInUp" data-vp-add-class-small="fadeInLeft">
+              <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
@@ -212,17 +219,17 @@
   </g>
 </svg>
 
+            </div>
+            <div class="animated " data-vp-add-class="fadeInUp" data-vp-add-class-small="fadeInLeft">
+              <h5>服务项目</h5>
+              <p>企业官网建设</p>
+            </div>
           </div>
-          <div class="animated " data-vp-add-class="fadeInUp" data-vp-add-class-small="fadeInLeft">
-        <h5>服务项目</h5>
-        <p>企业官网建设</p>
         </div>
-        </div>
-      </div>
-      <div class="small-12 medium-4">
-        <div class="box">
-          <div class="animated " data-vp-add-class="fadeInUp" data-vp-add-class-small="fadeInLeft">
-            <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+        <div class="small-12 medium-4">
+          <div class="box">
+            <div class="animated " data-vp-add-class="fadeInUp" data-vp-add-class-small="fadeInLeft">
+              <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
@@ -274,128 +281,124 @@
   </g>
 </svg>
 
-          </div>
-          <div class="animated " data-vp-add-class="fadeInUp" data-vp-add-class-small="fadeInLeft">
-        <h5>价值观</h5>
-        <p>敬畏、友善、激情、创新</p>
-        </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="section" id="section4">
-  <div class="container">
-    <div class="wrap">
-      <div class="small-12 medium-4">
-        <div class="box">
-          <div>
-          <h5><span class="leader">技术开发</span>服务项目</h5>
-          <p>企业官网建设：</p>
-          <p>企业官网标准版</p>
-          <p>企业官网定制版</p>
-          <p>微信平台开发：</p>
-          <p>微信平台基础版</p>
-          <p>微信平台升级版</p>
-          <p>微信平台定制版</p>
-          </div>
-        </div>
-      </div>
-      <div class="small-12 medium-4">
-        <div class="box">
-          <div>
-          <h5><span class="leader">形象设计</span>服务项目</h5>
-          <p>企业、品牌LOGO设计</p>
-          <p>企业宣传图、海报等设计</p>
-          <p>其他平面设计、网页设计服务</p>
-          </div>
-        </div>
-      </div>
-      <div class="small-12 medium-4">
-        <div class="box">
-          <div>
-          <h5><span class="leader">产品策划</span>与<span class="leader">咨询</span>服务项目</h5>
-          <p>传统企业向互联网转型的咨询与策划</p>
-          <p>互联网品牌运营策划的咨询与策划</p>
-          <p>互联网品牌平台搭建的咨询与策划</p>
+            </div>
+            <div class="animated " data-vp-add-class="fadeInUp" data-vp-add-class-small="fadeInLeft">
+              <h5>价值观</h5>
+              <p>敬畏、友善、激情、创新</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<!--div class="section" id="section5">
-  <div class="container">
-    <div class="box">
-    </div>
-  </div>
-</div-->
-<div class="section" id="section6">
-  <div class="container">
-    <div class="wrap">
-      
-      <div class="small-6 medium-3">
-      <img src="img/image1.png" class="animated " data-vp-add-class="fadeInUp">
-      </div>
-      
-      <div class="small-6 medium-3">
-      <img src="img/image2.png" class="animated " data-vp-add-class="fadeInUp">
-      </div>
-      
-      <div class="small-6 medium-3">
-      <img src="img/image3.png" class="animated " data-vp-add-class="fadeInUp">
-      </div>
-      
-      <div class="small-6 medium-3">
-      <img src="img/image4.png" class="animated " data-vp-add-class="fadeInUp">
-      </div>
-      
-      <div class="small-6 medium-3">
-      <img src="img/image5.png" class="animated " data-vp-add-class="fadeInUp">
-      </div>
-      
-      <div class="small-6 medium-3">
-      <img src="img/image6.png" class="animated " data-vp-add-class="fadeInUp">
-      </div>
-      
-      <div class="small-6 medium-3">
-      <img src="img/image7.png" class="animated " data-vp-add-class="fadeInUp">
-      </div>
-      
-      <div class="small-6 medium-3">
-      <img src="img/image8.png" class="animated " data-vp-add-class="fadeInUp">
-      </div>
-      
-    </div>
-  </div>
-</div>
-<div class="section" id="section7">
-  <div class="container">
-    <div class="wrap">
-      <div class="small-12 medium-6">
-        <div class="center-box">
-          <h4 class="animated" data-vp-add-class="fadeInUp">联系我们
-            <small class="subheader">Contact US</small>
-          </h4>
-          <div class="address animated" data-vp-add-class="fadeInUp">
-            <p class="leader">济南驰荣信息科技有限公司</p>
-            <p>地址：山东省济南市高新区会展西路88号香格里拉1号楼22F</p>
-            <p>联系人：金老师</p>
-            <p>电话：15662798288</p>
-            <a href="http://weibo.com/2772941304/profile?topnav=1&wvr=6&is_all=1" class="circle"><img src="img/xinlang.png"></a>
-            <a href="#" class="circle"><img src="img/weixin.png"></a>
+  <div class="section" id="section4" data-anchor="servicepage">
+    <div class="container">
+      <div class="wrap">
+        <div class="small-12 medium-4">
+          <div class="box">
+            <div>
+              <h5><span class="leader">技术开发</span>服务项目</h5>
+              <p>企业官网建设：</p>
+              <p>企业官网标准版</p>
+              <p>企业官网定制版</p>
+              <p>微信平台开发：</p>
+              <p>微信平台基础版</p>
+              <p>微信平台升级版</p>
+              <p>微信平台定制版</p>
+            </div>
+          </div>
+        </div>
+        <div class="small-12 medium-4">
+          <div class="box">
+            <div>
+              <h5><span class="leader">形象设计</span>服务项目</h5>
+              <p>企业、品牌LOGO设计</p>
+              <p>企业宣传图、海报等设计</p>
+              <p>其他平面设计、网页设计服务</p>
+            </div>
+          </div>
+        </div>
+        <div class="small-12 medium-4">
+          <div class="box">
+            <div>
+              <h5><span class="leader">产品策划</span>与<span class="leader">咨询</span>服务项目</h5>
+              <p>传统企业向互联网转型的咨询与策划</p>
+              <p>互联网品牌运营策划的咨询与策划</p>
+              <p>互联网品牌平台搭建的咨询与策划</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="small-12 medium-6" id="map">
+    </div>
+  </div>
+  <div class="section" id="section6" data-anchor="friendpage">
+    <div class="container">
+      <div class="wrap">
+        
+        <div class="small-6 medium-3">
+          <img src="img/image1.png" class="animated " data-vp-add-class="fadeInUp">
+        </div>
+        
+        <div class="small-6 medium-3">
+          <img src="img/image2.png" class="animated " data-vp-add-class="fadeInUp">
+        </div>
+        
+        <div class="small-6 medium-3">
+          <img src="img/image3.png" class="animated " data-vp-add-class="fadeInUp">
+        </div>
+        
+        <div class="small-6 medium-3">
+          <img src="img/image4.png" class="animated " data-vp-add-class="fadeInUp">
+        </div>
+        
+        <div class="small-6 medium-3">
+          <img src="img/image5.png" class="animated " data-vp-add-class="fadeInUp">
+        </div>
+        
+        <div class="small-6 medium-3">
+          <img src="img/image6.png" class="animated " data-vp-add-class="fadeInUp">
+        </div>
+        
+        <div class="small-6 medium-3">
+          <img src="img/image7.png" class="animated " data-vp-add-class="fadeInUp">
+        </div>
+        
+        <div class="small-6 medium-3">
+          <img src="img/image8.png" class="animated " data-vp-add-class="fadeInUp">
+        </div>
+        
       </div>
     </div>
   </div>
-</div>
+  <div class="section" id="section7" data-anchor="contactpage">
+    <div class="container">
+      <div class="wrap">
+        <div class="small-12 medium-6">
+          <div class="center-box">
+            <h4 class="animated" data-vp-add-class="fadeInUp">联系我们
+              <small class="subheader">Contact US</small>
+            </h4>
+            <div class="address animated" data-vp-add-class="fadeInUp">
+              <p class="leader">济南驰荣信息科技有限公司</p>
+              <p>地址：山东省济南市高新区会展西路88号香格里拉1号楼22F</p>
+              <p>联系人：金老师</p>
+              <p>电话：15662798288</p>
+              <a href="http://weibo.com/2772941304/profile?topnav=1&wvr=6&is_all=1" class="circle"><img src="img/xinlang.png"></a>
+              <a href="#" class="circle"><img src="img/weixin.png"></a>
+            </div>
+          </div>
+        </div>
+        <div class="small-12 medium-6" id="map">
+        </div>
+      </div>
+    </div>
+  </div>
+
 
     
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.nav.js"></script>
+    <!-- <script src="//cdn.bootcss.com/fullPage.js/2.8.7/jquery.fullPage.min.js"></script> -->
     <script src="js/jquery.viewportchecker.min.js"></script>
     <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.3&key=b03a155029e566a451cb4c7266b486d2"></script>
     <script src="js/app.js"></script>
