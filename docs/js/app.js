@@ -1,3 +1,17 @@
+/** friends slide **/
+$("#section6").find(".wrap").eq(1).hide();
+$(".slide-nav a").on("click", function(e){
+  e.preventDefault();
+  /** change active **/
+  $(this).parent("li").addClass("active");
+  $(this).parent("li").siblings("li").removeClass("active");
+
+  /** change slide **/
+  var index = $(this).parent("li").index();
+  $("#section6").find(".wrap").eq(index).show();
+  $("#section6").find(".wrap").not(":eq("+index+")").hide();
+});
+
 $("#fullpage").fullpage({
   anchors: ['mainpage', 'aboutpage', 'profilepage', 'servicepage', 'friendpage', 'contactpage'],
   menu: '#nav',

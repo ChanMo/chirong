@@ -226,6 +226,7 @@ $top-height: 4.5rem;
     @include box-cover(rgba(black, 0.4));
     color: white;
     .center-box {
+      top: 45%;
         @media (min-width:map_get($grid-breakpoints, medium)) {
             transform: translateX(0);
         }
@@ -245,7 +246,7 @@ $top-height: 4.5rem;
 
 
 #section2 .container {
-    background-image: url(../img/bg2.png);
+    background-image: url(../img/aboutus_bg_s.png);
     @include bg-image;
     &, .wrap, .medium-12 {
         height: 100%;
@@ -256,7 +257,7 @@ $top-height: 4.5rem;
         }
     }
     .medium-12:nth-child(1) {
-        background-image: url(../img/bg2.png);
+        background-image: url(../img/aboutus_bg_s.png);
         @include bg-image;
         @media (max-width:map_get($grid-breakpoints, large)) {
             display: none !important;
@@ -547,4 +548,27 @@ $top-height: 4.5rem;
 
 .animated {
     opacity: 0;
+}
+
+.slide-nav {
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  transform: translateX(-50%);
+  text-align: center;
+  li {
+    display: inline-block;
+  }
+  a {
+    display: inline-block;
+    margin: 0 5px;
+    width: 30px;
+    height: 6px;
+    //border-radius: 50%;
+    background: rgba(white, 0.54);
+  }
+  .active a {
+    background: rgba(white, 0.87);
+    //transform: scale(1.2);
+  }
 }
